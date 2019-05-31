@@ -10,7 +10,7 @@ elif C<10**-8:
     c=10**-7
 else:
     if K>1:
-        c=float((C+math.sqrt(C^2+4*10**-14))/2)
+        c=float((C+math.sqrt(C**2+4*10**-14))/2)
     else:
         c=10**-7
 print(-math.log(c,10))
