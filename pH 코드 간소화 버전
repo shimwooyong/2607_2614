@@ -1,0 +1,5 @@
+import math
+K = float(input())
+C = float(input())
+c = float((-K+math.sqrt(K**2+4*K*C))/2)
+print(-math.log(c,10))
