@@ -1,0 +1,17 @@
+#염기 코드
+import math
+K=float(input())#염기의 이온화 상수
+C=float(input())#수용액의 몰농도
+if C>10**-6:#평형의 체계적 고려X
+    if K>=1:
+        c=float(C)
+    else:
+        c=float((-K+math.sqrt(K**2+4*K*C))/2)
+elif C<10**-8:#매우 묽은 용액-->pH=7
+    c=10**-7
+else:#평형의 체계적 고려
+    if K>1:
+        c=float((C+math.sqrt(C**2+4*10**-14))/2)
+    else:
+        c=10**-7
+print(14+math.log(c,10))
