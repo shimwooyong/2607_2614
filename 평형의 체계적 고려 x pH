@@ -1,0 +1,10 @@
+K=float(input())
+C=float(input())
+if C > 10**-6:
+    if K>1:
+        c=float(C)
+    else:
+        c=float(math.sqrt(K*C))
+elif C<10**-8:
+    c=10**-7
+print(-math.log(c,10))
