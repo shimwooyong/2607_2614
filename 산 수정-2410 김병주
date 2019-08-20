@@ -1,0 +1,19 @@
+#산 코드
+import math
+print('산의 Ka를 입력해주세요.')
+K=float(input())#산의 이온화 상수
+print('몰농도를 입력해주세요.')
+C=float(input())#수용액의 몰농도
+if C>10**-6:#평형의 체계적 고려X
+    if K>=1:
+        c=float(C)
+    else:
+        c=float((-K+math.sqrt(K**2+4*K*C))/2)
+elif C<10**-8:#매우 묽은 용액-->pH=7
+    c=10**-7
+else:#평형의 체계적 고려
+    if K>1:
+        c=float((C+math.sqrt(C**2+4*10**-14))/2)
+    else:
+        c=10**-7
+print('pH는 ',-math.log(c,10),'입니다.')
