@@ -1,0 +1,7 @@
+import math
+K = float(input())#산의 이온화 상수
+Kw = 10**-14#물의 이온화 상수
+C = float(input())#농도
+c = float((-K+math.sqrt(K**2+4*K*C))/2)#해리에 의한 수소이온농도
+cc = ((c+math.sqrt(c**2+4*Kw))/2)#평형의 체계적 고려를 한 수소이온농도
+print(-math.log(cc,10))#pH
