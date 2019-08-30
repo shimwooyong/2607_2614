@@ -1,0 +1,15 @@
+import math
+K1 = float(input())#제 1 이온화상수
+K2 = float(input())#제 2 이온화상수
+Kw = 10**-14#물의 이온화상수
+C = float(input())#2가산의 농도
+cx = float((-K1+math.sqrt(K1**2+4*K1*C))/2)#1차해리에 의한 수소이온농도
+cy = float((-K2+math.sqrt(K2**2+4*K2*cx))/2)#2차해리에 의한 수소이온농도
+cc = (((cx+cy)+math.sqrt((cx+cy)**2+4*Kw))/2)#평형의 체계적 고려를 한 수소이온농도
+print(K1)
+print(K2)
+print(C)
+print(cx)
+print(cy)
+print(cc)
+print(-math.log(cc,10))
