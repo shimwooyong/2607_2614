@@ -1,4 +1,3 @@
-#산 코드
 import math
 K=float(input())#산의 이온화 상수
 C=float(input())#수용액의 몰농도
@@ -11,7 +10,7 @@ elif C<10**-8:#매우 묽은 용액-->pH=7
     c=10**-7
 else:#평형의 체계적 고려
     if K>1:
-        c=float((C+math.sqrt(C**2+4*10**-14))/2)
+        c=float((C+math.sqrt(C**2+4*10**-14))/2) # 강산일 경우 다음과 같은 수식
     else:
-        c=10**-7
+        c=10**-7 # 약산일 경우 pH = 7로 근사
 print(-math.log(c,10))
